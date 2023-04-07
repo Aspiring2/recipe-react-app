@@ -1,0 +1,54 @@
+/* Recipe Tiles Section */
+.app__recipes {
+  margin-top: 24px;
+  background-color: #ffffff;
+  padding: 20px;
+}
+  
+.app__recipes h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ff2e63;
+  text-align: center;
+  margin-bottom: 12px;
+  grid-column: 2 / 3; 
+}
+
+.recipeTile__name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 8px 0;
+  color: #333;
+}
+
+.recipeTiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch; /* установка выравнивания по высоте */
+}
+
+.recipeTile {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  
+}
+
+.recipeTile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Query */
+@media only screen and (max-width: 600px) {
+  .recipeTiles {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+  
+  .recipeTile {
+    margin-bottom: 20px;
+  }
+}

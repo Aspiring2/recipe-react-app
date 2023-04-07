@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Small screens */
+@media screen and (max-width: 768px) {
+  .app__recipes {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .app__input,
+  .app__submit {
+    font-size: 14px;
+  }
+}
+
+/* Medium screens */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .app__recipes {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+
+  .app__input,
+  .app__submit {
+    font-size: 16px;
+  }
+}
+
+/* Large screens */
+@media screen and (min-width: 1025px) {
+  .app__recipes {
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+  }
+
+  .app__input,
+  .app__submit {
+    font-size: 18px;
+  }
+}
